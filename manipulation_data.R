@@ -52,6 +52,10 @@ for (i in 1:nrow(t)) {
 t1 <- t %>% filter(Polymer %in% c("PP","PE")) %>% filter(Station %in% c("st04")) %>% add_column(net_prod_13CO2_mmol= NA)
 write_excel_csv(t1,"t1.csv")
 
+
+
+
+################prod. 13CO2 (mmol)#####################################
 for( i in 1:nrow(t1)){
   for (y in unique(t1$Station) ) {
     for (z in unique(t1$Polymer)) {
